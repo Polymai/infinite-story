@@ -1,0 +1,227 @@
+.btn {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  color: var(--ink-strong);
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-primary {
+  background: var(--night);
+  color: #fff9eb;
+}
+
+.btn-accent {
+  background: var(--ember);
+  color: #fff9eb;
+}
+
+.btn-ghost {
+  border-color: var(--line);
+  background: rgba(255, 253, 248, 0.72);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: white;
+}
+
+.icon-btn {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  color: var(--ink-strong);
+}
+
+.card,
+.panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 248, 0.86);
+  box-shadow: var(--shadow-card);
+}
+
+.card {
+  padding: 18px;
+}
+
+.panel {
+  padding: 22px;
+}
+
+.metric {
+  display: grid;
+  gap: 3px;
+  padding: 14px;
+  border: 1px solid rgba(21, 32, 51, 0.1);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 253, 248, 0.7);
+}
+
+.metric strong {
+  color: var(--ink-strong);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.metric span {
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--ink-soft);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  background: var(--teal-soft);
+  color: var(--teal);
+}
+
+.mobile-nav .nav-link {
+  min-height: 46px;
+  justify-content: center;
+  padding: 6px;
+  font-size: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+}
+
+.field label {
+  color: var(--ink-strong);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  color: var(--ink);
+}
+
+.field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.trust-note,
+.muted {
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 253, 248, 0.76);
+  color: var(--ink-soft);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.status {
+  display: grid;
+  gap: 10px;
+  padding: 18px;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 248, 0.6);
+  color: var(--ink-soft);
+}
+
+.toast-root {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 80;
+  display: grid;
+  gap: 10px;
+  width: min(360px, calc(100vw - 32px));
+}
+
+.toast {
+  padding: 13px 14px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--teal);
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-card);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.toast.error {
+  border-left-color: var(--danger);
+}
+
+.loader-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  display: grid;
+  place-items: center;
+  background: rgba(17, 24, 39, 0.36);
+}
+
+.loader-box {
+  display: grid;
+  min-width: min(340px, calc(100vw - 40px));
+  gap: 12px;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-soft);
+}
