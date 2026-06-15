@@ -1,0 +1,38 @@
+[
+  {
+    "key": "fantasy",
+    "label": "Fantasy",
+    "promptTone": "mythic, wondrous, character-led",
+    "starter": "A hidden city is waking beneath the roots of an ancient forest."
+  },
+  {
+    "key": "mystery",
+    "label": "Mystery",
+    "promptTone": "tense, clue-driven, elegant",
+    "starter": "A sealed letter arrives with a map that should not exist."
+  },
+  {
+    "key": "science-fiction",
+    "label": "Science Fiction",
+    "promptTone": "speculative, cinematic, humane",
+    "starter": "The last archive ship receives a message from tomorrow."
+  },
+  {
+    "key": "historical",
+    "label": "Historical",
+    "promptTone": "immersive, grounded, textured",
+    "starter": "A forgotten apprentice is asked to carry a treaty through a city at war."
+  },
+  {
+    "key": "romance",
+    "label": "Romance",
+    "promptTone": "warm, intimate, emotionally precise",
+    "starter": "Two rival correspondents begin signing their letters with false names."
+  },
+  {
+    "key": "adventure",
+    "label": "Adventure",
+    "promptTone": "fast-moving, vivid, discovery-led",
+    "starter": "A weathered compass points to a coastline erased from every chart."
+  }
+]

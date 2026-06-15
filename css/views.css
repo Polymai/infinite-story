@@ -1,0 +1,126 @@
+.auth-card {
+  width: min(460px, calc(100% - 32px));
+  margin: 36px auto 80px;
+}
+
+.auth-card h1,
+.panel h2,
+.card h3 {
+  margin: 0 0 8px;
+  color: var(--ink-strong);
+}
+
+.story-list {
+  display: grid;
+  gap: 12px;
+}
+
+.story-card {
+  display: grid;
+  gap: 12px;
+}
+
+.story-card header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.story-card h3 {
+  margin: 0;
+}
+
+.chapter-reader {
+  display: grid;
+  gap: 18px;
+  padding: 28px;
+}
+
+.chapter-reader h2 {
+  margin: 0;
+  color: var(--ink-strong);
+  font-family: var(--font-display);
+  font-size: 40px;
+  line-height: 1.05;
+}
+
+.chapter-text {
+  color: #253247;
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.55;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.choice-card {
+  display: grid;
+  min-height: 120px;
+  gap: 8px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper-strong);
+  text-align: left;
+}
+
+.choice-card:hover {
+  border-color: rgba(184, 92, 56, 0.45);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 14px;
+}
+
+.timeline-item {
+  display: grid;
+  gap: 6px;
+  padding-left: 18px;
+  border-left: 3px solid var(--teal-soft);
+}
+
+.inventory-grid,
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 14px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plan-card {
+  display: grid;
+  gap: 14px;
+}
+
+.plan-card.is-featured {
+  border-color: rgba(15, 118, 110, 0.32);
+  background: linear-gradient(180deg, rgba(216, 240, 235, 0.7), rgba(255, 253, 248, 0.92));
+}
+
+@media (max-width: 760px) {
+  .choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chapter-reader {
+    padding: 20px;
+  }
+
+  .chapter-text {
+    font-size: 21px;
+  }
+}

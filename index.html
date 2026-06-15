@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111827">
+    <title>Infinite Story</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/brand.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/views.css">
+    <link rel="stylesheet" href="css/motion.css">
+  </head>
+  <body>
+    <div id="app" class="app-shell" aria-live="polite">
+      <div class="boot-screen" role="status" aria-busy="true">
+        <span class="brand-mark" aria-hidden="true">IS</span>
+        <span>Opening Infinite Story</span>
+      </div>
+    </div>
+    <div id="toast-root" class="toast-root" aria-live="polite"></div>
+    <script src="data/supabaseConfig.js"></script>
+    <script src="data/stripeConfig.js"></script>
+    <script src="data/runtimeConfig.js"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
