@@ -1,0 +1,37 @@
+import { appAction, appDb } from "./supabaseClient.js";
+
+const OPENING_CHAPTER_TIMEOUT_MS = 45000;
+
+export async function loadStories() {
+  const { data, error } = await appDb.from("stories").select("*").order("updated_at", { ascending: false });
+  if (error) throw error;
+  return data || [];
+}
+
+export async function createStory(input) {
+  const title = String(input.title || "Untitled story").trim().slice(0, 120);
+  const genre = String(input.genre || "fantasy");
+  const language = String(input.language || "en");
+  const audience = String(input.audience || "adult");
+  const premise = String(input.premise || "").trim().slice(0, 1200);
+  const tone = String(input.tone || "cinematic");
+  const result = await appAction("create-story", { title, genre, language, audience, premise, tone }, { timeoutMs: OPENING_CHAPTER_TIMEOUT_MS });
+  return result.storyId;
+}
+
+export async function loadStoryBundle(storyId) {
+  const [{ data: story, error: storyError }, { data: chapters, error: chapterError }, { data: events, error: eventError }] = await Promise.all([
+    appDb.from("stories").select("*").eq("id", storyId).maybeSingle(),
+    appDb.from("chapters").select("*").eq("story_id", storyId).order("chapter_number", { ascending: true }),
+    appDb.from("story_events").select("*").eq("story_id", storyId).order("created_at", { ascending: true }),
+  ]);
+  if (storyError) throw storyError;
+  if (chapterError) throw chapterError;
+  if (eventError) throw eventError;
+  return { story, chapters: chapters || [], timeline: events || [] };
+}
+
+export async function deleteStory(storyId) {
+  const { error } = await appDb.from("stories").delete().eq("id", storyId);
+  if (error) throw error;
+}
